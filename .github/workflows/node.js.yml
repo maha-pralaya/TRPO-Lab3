@@ -25,17 +25,15 @@ jobs:
     - run: npm run build --if-present
     - run: npm run lint
     - run: npm run test
-    - name: Login to Heroku Container registry
+    - name: Heroku
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login 
-    - name: Push
+    - run: heroku container:login 
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a Lab3 web 
-    - name: Release
+    - run: heroku container:push -a labmirea web 
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release -a appname web 
+    - run: heroku container:release -a labmirea web 
     env:
       CI: true  
