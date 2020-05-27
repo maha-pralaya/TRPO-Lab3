@@ -7,7 +7,7 @@
     "test": "react-scripts test",
     "start": "react-scripts start",
     "build": "webpack --mode production",
-    "lint": "eslint './src/**/*.{js,jsx}' --fix"
+    "lint": "eslint './src/**/*.{js,jsx}'"
   },
   "author": "",
   "license": "ISC",
