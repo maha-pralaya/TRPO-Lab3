@@ -6,7 +6,8 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "eslint './src/**/*.{js,jsx}' --fix"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "eslint-config-airbnb": "^18.1.0",
     "html-webpack-plugin": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

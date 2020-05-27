@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  '../styles/App.css';
+import '../styles/App.css';
 import getResult from './getResult';
 
 class Sent extends Component {
@@ -24,6 +24,8 @@ class Sent extends Component {
   }
 
   render() {
+    const { shortest } = this.state;
+    const { longest } = this.state;
     return (
       <div>
         <textarea onChange={this.change} id="mainText" name="mainText" cols="40" rows="6" placeholder="Введите свой текст..." />
@@ -31,12 +33,12 @@ class Sent extends Component {
           <button type="button" id="clear" onClick={this.clear}>Очистить</button>
         </div>
         <p id="shortest">
-          Самое короткое предложение: 
-          {this.state.shortest}
+          Самое короткое предложение:
+          {shortest}
         </p>
         <p id="longest">
-          Самое длинное предложение: 
-          {this.state.longest}
+          Самое длинное предложение:
+          {longest}
         </p>
       </div>
     );
