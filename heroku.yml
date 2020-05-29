@@ -1,4 +1,4 @@
 build:
     docker:
       web: Dockerfile
-run: "node ./server.js"
+run: "node server.js"
