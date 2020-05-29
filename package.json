@@ -6,6 +6,7 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
+    "servstart": "node ./server.js",
     "build": "webpack",
     "lint": "eslint './src/**/*.{js,jsx}'"
   },
